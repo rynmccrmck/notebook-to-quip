@@ -19,7 +19,7 @@ def _html_from_notebook(notebook_path):
 
     notebook = nbformat.reads(notebook_to_convert, as_version=4)
 
-    html_exporter = HTMLExporter(exclude_anchor_links='', exclude_input=True)
+    html_exporter = HTMLExporter(anchor_link_text='', exclude_input=True)
 
     (body, resources) = html_exporter.from_notebook_node(notebook)
     return body
